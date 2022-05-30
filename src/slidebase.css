@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.slidebaseContainer {
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: 0.2s;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slidebaseNavigation {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    width: 125px;
+    justify-content: space-between;
+}
+
+#nextSlide, #previousSlide {
+    background-color: white;
+    border: none;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
